@@ -71,7 +71,7 @@ for sample in seg_stack:
 # %%
 # Compute the porosity values
 # Note you may wish to use additional workers
-# or a difference scheduler. See:
+# or a different scheduler. See:
 # https://docs.dask.org/en/latest/scheduler-overview.html
 porosity_c = dask.compute(*porosity_out)
 
@@ -107,7 +107,7 @@ for sample in seg_stack:
 # Compute the fiber parameters.
 # Note: this can take ~1 min per image
 # You may wish to use additional workers
-# or a difference scheduler. See:
+# or a different scheduler. See:
 # https://docs.dask.org/en/latest/scheduler-overview.html
 fvals_c = dask.compute(*fvals_out)
 # %%

@@ -15,7 +15,7 @@ The python script [Analyze_fibers.py](https://github.com/psobolewskiPhD/SEM_fibe
 As previously, images are loaded using `dask-image` with each image being a block in a dask array. Then segmentation is obtained using `map_blocks`, as previously described.    
 Next, a function is defined to calculate the porosity using `quanfima` and the calculation is parallelized using `dask`. The outputs are paired up with the names of the input images and returned as a dict.   
 Finally, the segmented images are used to obtain the fiber orientations and diameters again using `quanfima`. As previously, the calculation is parallelized using `dask`.  
-*Note: it can take ~1 min per image to run this, so it's recommended to consider using the `processess` schedule or the `dask.distributed` scheduler. See [the Dask scheduler docs](https://docs.dask.org/en/latest/scheduler-overview.html) for details.*  
+*Note: it can take ~1 min per image to run this, so it's recommended to consider using the `processess` scheduler or the `dask.distributed` scheduler. See [the Dask scheduler docs](https://docs.dask.org/en/latest/scheduler-overview.html) for details.*  
 Summary values (means and standard deviations) are computed, paired up with the input images names, and returned as a dict.
 
 [^1]: Note: In python3, the `quanfima` module has some problems due to relatively old dependencies. A fork capable of running 2D image fiber analysis in python3 is available: [https://github.com/psobolewskiPhD/quanfima](https://github.com/psobolewskiPhD/quanfima)
