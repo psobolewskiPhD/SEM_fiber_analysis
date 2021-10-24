@@ -7,7 +7,7 @@ The Jupyter notebook [`Example_Fiber_analysis.ipynb`](https://github.com/psobole
 
 # Visualizing the segmentation and skeletonization using napari
 The python script [Visualize_Segment_Skeleton.py](https://github.com/psobolewskiPhD/SEM_fiber_analysis/blob/main/Visualize_Segment_Skeleton.py) permits visualization of the outputs of segmenting the fibers, followed by skeletonization. These are crucial steps for the downstream `quanfima` analysis.  
-First, images are loaded using `dask-image` with each image being a block in a dask array. Then segmentation and skeletonization steps are applied using `map_blocks`, a `dask.array` function that applies a function to an array (here stack of images) block-wise (here image by image).  
+First, images are loaded using `dask-image` with each image being a block in a dask array. Then segmentation and skeletonization steps are applied using `map_blocks`, a `dask.array` method that applies a function to an array (here stack of images) block-wise (here image by image).  
 Using napari these steps can be visualized lazily, on a per-image basis, without pre-computing for every image. The computations are performed when a slice is selected.
 
 [^1]: Note: In python3, the `quanfima` module has some problems due to relatively old dependencies. A fork capable of running 2D image fiber analysis in python3 is available: [https://github.com/psobolewskiPhD/quanfima](https://github.com/psobolewskiPhD/quanfima)
