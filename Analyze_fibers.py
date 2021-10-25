@@ -14,8 +14,11 @@ from skimage import filters, morphology
 all_samples = imread("./fiber_data/*.jpg")
 # set the scale in micron per pixel of the images
 scale = [1 / 35.5, 1 / 35.5]
-# get list of filenames to match the imported images
-file_list = os.listdir("fiber_data")
+# get list of filenames to match the imported images, ignore dot files
+file_list = []
+for item in os.listdir("fiber_data"):
+    if not item.startswith(".") and os.path.isfile(os.path.join("fiber_data", item)):
+        file_list.append(item)
 file_list = sorted(file_list)
 
 # %%
