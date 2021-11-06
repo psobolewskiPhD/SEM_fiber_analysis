@@ -89,7 +89,7 @@ def fiber_analysis(seg_slice):
     skel = morphology.skeletonize(seg_slice)
     # quanfima function to get fiber parameters
     cskel, fskel, omap, dmap, ovals, dvals = mrph.estimate_fiber_properties(
-        seg_slice, skel
+        seg_slice, skel, window_radius=3
     )
     # return a list of the orientation and diameter arrays
     fvals = [ovals, dvals]
