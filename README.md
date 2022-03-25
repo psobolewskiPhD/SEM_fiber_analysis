@@ -1,3 +1,8 @@
+This repository has the code for the bacterial cellulose fiber analysis (using SEM) that has been published as:  
+"Silicone polyether surfactant enhances bacterial cellulose synthesis and water holding capacity"  
+International Journal of Biological Macromolecules, 2022  
+https://doi.org/10.1016/j.ijbiomac.2022.03.124
+
 # SEM_fiber_analysis
 This repository contains python scipts to perform fiber analysis in SEM images.
 It uses [scikit-image](https://github.com/scikit-image/scikit-image) and [quanfima](https://github.com/rshkarin/quanfima)[^1] for the analysis, [dask](https://github.com/dask/dask) for lazy-loading and parallelization, and [napari](https://github.com/napari/napari) for intermediate outcome visualization.
